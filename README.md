@@ -31,13 +31,13 @@ A reflex training game integrated directly into the keyboard. The keyboard waits
 
 An embedded version of the classic Minesweeper logic, using the keyboard's switch matrix as the grid and RGB LEDs for status feedback.
 
-### [cite_start]1. Power On & Boot Sequence [cite: 4, 5]
+### 1. Power On & Boot Sequence
 When you plug in the keyboard, the system initiates a **Self-Check Sequence**:
 1.  **Scanning**: Cyan lights scan the game area row by row.
 2.  **System Ready**: The entire grid flashes **White** once.
 3.  **Standby**: All lights turn off. The game is ready.
 
-### [cite_start]2. Game Controls [cite: 7]
+### 2. Game Controls
 
 | Action | Key Combination | Description |
 | :--- | :--- | :--- |
@@ -46,16 +46,16 @@ When you plug in the keyboard, the system initiates a **Self-Check Sequence**:
 | **Unflag** | `Shift` + Game Key | Removes the flag from a cell. |
 | **Restart** | `Spacebar` | Resets the board and starts a new game immediately. |
 
-### [cite_start]3. The Game Area [cite: 8, 9]
+### 3. The Game Area
 
 The game uses a **4x6 Grid** on the left side of your keyboard:
 
-* [cite_start]**Row 1:** `1`, `2`, `3`, `4`, `5`, `6` [cite: 10]
-* [cite_start]**Row 2:** `Q`, `W`, `E`, `R`, `T`, `Y` [cite: 11]
-* [cite_start]**Row 3:** `A`, `S`, `D`, `F`, `G`, `H` [cite: 12]
-* [cite_start]**Row 4:** `Z`, `X`, `C`, `V`, `B`, `N` [cite: 13]
+* **Row 1:** `1`, `2`, `3`, `4`, `5`, `6`
+* **Row 2:** `Q`, `W`, `E`, `R`, `T`, `Y`
+* **Row 3:** `A`, `S`, `D`, `F`, `G`, `H`
+* **Row 4:** `Z`, `X`, `C`, `V`, `B`, `N`
 
-### [cite_start]4. Color Legend (Visual Feedback) [cite: 15-21]
+### 4. Color Legend (Visual Feedback)
 
 | Color | Meaning |
 | :--- | :--- |
@@ -69,10 +69,10 @@ The game uses a **4x6 Grid** on the left side of your keyboard:
 
 ### 5. Special Features
 
-* **First Click Safe:** Your very first click in a new game is guaranteed to be safe. [cite_start]It will automatically open up a starting area, so no luck is required to start[cite: 23, 24].
-* [cite_start]**Auto-Open:** Revealing a "0" (zero mines nearby) automatically reveals all connected empty cells to speed up gameplay[cite: 25].
-* [cite_start]**Win Condition:** Reveal all safe cells to trigger the **Victory Light Show** (Flashing Green)[cite: 26].
-* [cite_start]**Lose Condition:** Hitting a mine triggers an explosion and reveals all hidden mines in **Red**[cite: 27].
+* **First Click Safe:** Your very first click in a new game is guaranteed to be safe. It will automatically open up a starting area, so no luck is required to start.
+* **Auto-Open:** Revealing a "0" (zero mines nearby) automatically reveals all connected empty cells to speed up gameplay.
+* **Win Condition:** Reveal all safe cells to trigger the **Victory Light Show** (Flashing Green).
+* **Lose Condition:** Hitting a mine triggers an explosion and reveals all hidden mines in **Red**.
 
 ---
 
