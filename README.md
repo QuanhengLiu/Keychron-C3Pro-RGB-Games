@@ -1,5 +1,3 @@
-# Keychron-C3Pro-RGB-Games
-Embedded C projects based on QMK firmware: RGB Minesweeper &amp; Reaction Time Test running on Keychron C3 Pro.
 # Interactive RGB Games on QMK Firmware
 
 > A custom firmware project for the **Keychron C3 Pro**, featuring two interactive games implemented entirely through RGB lighting feedback and C-based logic.
@@ -23,69 +21,58 @@ Embedded C projects based on QMK firmware: RGB Minesweeper &amp; Reaction Time T
 
 ---
 
-## ✨ Game Features
+## 🕹️ Game 1: Reaction Time Test ⚡
 
-### 1. Reaction Time Test ⚡
-A reflex training game integrated directly into the keyboard.
-
-### 2. RGB Minesweeper 💣
-##  Power On & Boot Sequence
-[cite_start]When you plug in the keyboard, the system initiates a **Self-Check Sequence**[cite: 4]:
-1.  [cite_start]**Scanning**: Cyan lights scan the game area row by row[cite: 4].
-2.  [cite_start]**System Ready**: The entire grid flashes **White** once[cite: 5].
-3.  **Standby**: All lights turn off. [cite_start]The game is ready[cite: 5].
+A reflex training game integrated directly into the keyboard. The keyboard waits for a random interval and flashes a signal; your goal is to press a key as quickly as possible. The RGB lighting will display your speed tier.
 
 ---
 
-## 🎮 Game Controls
+## 🕹️ Game 2: RGB Minesweeper 💣
+
+An embedded version of the classic Minesweeper logic, using the keyboard's switch matrix as the grid and RGB LEDs for status feedback.
+
+### [cite_start]1. Power On & Boot Sequence [cite: 4, 5]
+When you plug in the keyboard, the system initiates a **Self-Check Sequence**:
+1.  **Scanning**: Cyan lights scan the game area row by row.
+2.  **System Ready**: The entire grid flashes **White** once.
+3.  **Standby**: All lights turn off. The game is ready.
+
+### [cite_start]2. Game Controls [cite: 7]
 
 | Action | Key Combination | Description |
 | :--- | :--- | :--- |
-| **Reveal Cell** | Press any Game Key | [cite_start]Reveals the content of the cell[cite: 7]. |
-| **Flag Mine** | `Shift` + Game Key | [cite_start]Marks the cell as a mine (**Pink** light)[cite: 7]. |
-| **Unflag** | `Shift` + Game Key | [cite_start]Removes the flag from a cell[cite: 7]. |
-| **Restart** | `Spacebar` | [cite_start]Resets the board and starts a new game immediately[cite: 7]. |
+| **Reveal Cell** | Press any Game Key | Reveals the content of the cell. |
+| **Flag Mine** | `Shift` + Game Key | Marks the cell as a mine (**Pink** light). |
+| **Unflag** | `Shift` + Game Key | Removes the flag from a cell. |
+| **Restart** | `Spacebar` | Resets the board and starts a new game immediately. |
 
----
+### [cite_start]3. The Game Area [cite: 8, 9]
 
-## 🗺️ The Game Area
-
-[cite_start]The game uses a **4x6 Grid** on the left side of your keyboard[cite: 8, 9]:
+The game uses a **4x6 Grid** on the left side of your keyboard:
 
 * [cite_start]**Row 1:** `1`, `2`, `3`, `4`, `5`, `6` [cite: 10]
 * [cite_start]**Row 2:** `Q`, `W`, `E`, `R`, `T`, `Y` [cite: 11]
 * [cite_start]**Row 3:** `A`, `S`, `D`, `F`, `G`, `H` [cite: 12]
 * [cite_start]**Row 4:** `Z`, `X`, `C`, `V`, `B`, `N` [cite: 13]
 
----
-
-## 🎨 Color Legend (Visual Feedback)
+### [cite_start]4. Color Legend (Visual Feedback) [cite: 15-21]
 
 | Color | Meaning |
 | :--- | :--- |
-| ⚪ **Gray** | [cite_start]Unknown / Hidden cell [cite: 15] |
-| 🔵 **Blue** | [cite_start]**1** mine nearby [cite: 16] |
-| 🟢 **Green** | [cite_start]**2** mines nearby [cite: 17] |
-| 🟡 **Yellow** | [cite_start]**3** mines nearby [cite: 18] |
-| 🟠 **Orange** | [cite_start]**4** mines nearby [cite: 19] |
-| 🌸 **Pink** | [cite_start]Flagged as Mine [cite: 20] |
-| 🔴 **Red** | [cite_start]**BOOM!** (Game Over) [cite: 21] |
+| ⚪ **Gray** | Unknown / Hidden cell |
+| 🔵 **Blue** | **1** mine nearby |
+| 🟢 **Green** | **2** mines nearby |
+| 🟡 **Yellow** | **3** mines nearby |
+| 🟠 **Orange** | **4** mines nearby |
+| 🌸 **Pink** | Flagged as Mine |
+| 🔴 **Red** | **BOOM!** (Game Over) |
 
----
+### 5. Special Features
 
-## ✨ Game Features
-
-### 1. First Click Safe
-Your very first click in a new game is guaranteed to be safe. [cite_start]It will automatically open up a starting area, so no luck is required to start[cite: 23, 24].
-
-### 2. Auto-Open
-[cite_start]Revealing a "0" (zero mines nearby) automatically reveals all connected empty cells to speed up gameplay[cite: 25].
-
-### 3. Win Condition
-[cite_start]Reveal all safe cells to trigger the **Victory Light Show** (Flashing Green)[cite: 26].
-
-### 4. Lose Condition
-[cite_start]Hitting a mine triggers an explosion and reveals all hidden mines in **Red**[cite: 27].
+* **First Click Safe:** Your very first click in a new game is guaranteed to be safe. [cite_start]It will automatically open up a starting area, so no luck is required to start[cite: 23, 24].
+* [cite_start]**Auto-Open:** Revealing a "0" (zero mines nearby) automatically reveals all connected empty cells to speed up gameplay[cite: 25].
+* [cite_start]**Win Condition:** Reveal all safe cells to trigger the **Victory Light Show** (Flashing Green)[cite: 26].
+* [cite_start]**Lose Condition:** Hitting a mine triggers an explosion and reveals all hidden mines in **Red**[cite: 27].
 
 ---
 
@@ -94,6 +81,7 @@ Your very first click in a new game is guaranteed to be safe. [cite_start]It wil
 This repository contains the custom keymap and game logic source code.
 
 * `keymap.c`: Contains the core game loops and key event handling (State Machine).
+* `rgb_matrix_user.inc` (Optional): Custom RGB effect definitions.
 
 ---
 
