@@ -4,7 +4,7 @@
 
 ---
 
-## 🎮 Project Demo
+## Project Demo
 
 | ⚡ Reaction Time Test | 💣 RGB Minesweeper |
 | :---: | :---: |
@@ -12,7 +12,7 @@
 
 ---
 
-## ⌨️ Hardware Specs
+## Hardware Specs
 
 * **Device:** Keychron C3 Pro (RGB Version)
 * **MCU:** High-performance ARM Cortex-M4 (STM32F401)
@@ -21,13 +21,13 @@
 
 ---
 
-## 🕹️ Game 1: Reaction Time Test ⚡
+## 🕹️ Game 1: Reaction Time Test
 
 A reflex training game integrated directly into the keyboard. The keyboard waits for a random interval and flashes a signal; your goal is to press a key as quickly as possible. The RGB lighting will display your speed tier.
 
 ---
 
-## 🕹️ Game 2: RGB Minesweeper 💣
+## 🕹️ Game 2: RGB Minesweeper
 
 An embedded version of the classic Minesweeper logic, using the keyboard's switch matrix as the grid and RGB LEDs for status feedback.
 
@@ -76,7 +76,7 @@ The game uses a **4x6 Grid** on the left side of your keyboard:
 
 ---
 
-## 🛠️ Code Structure
+## Code Structure
 
 This repository contains the custom keymap and game logic source code.
 
@@ -85,7 +85,7 @@ This repository contains the custom keymap and game logic source code.
 
 ---
 
-## 🚀 How to Build & Flash
+## How to Build & Flash
 
 1.  **Setup Environment:**
     Ensure you have the QMK build environment or [QMK Toolbox](https://github.com/qmk/qmk_toolbox) installed.
@@ -100,6 +100,6 @@ This repository contains the custom keymap and game logic source code.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the [GPL-3.0](LICENSE) or later (Following QMK standards).
