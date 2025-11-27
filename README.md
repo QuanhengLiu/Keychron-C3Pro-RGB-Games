@@ -96,7 +96,7 @@ This repository contains the custom keymap and game logic source code.
     qmk compile -kb keychron/c3_pro/ansi/rgb -km [YOUR_KEYMAP_NAME]
     ```
 4.  **Flash:**
-    Switch the keyboard to **DFU Mode** (Remove spacebar module to find the reset button or hold Esc while plugging in), then flash the `.bin` file using QMK Toolbox.
+    Switch the keyboard to **DFU Mode** (Remove spacebar module to find the reset button), then flash the `.bin` file using QMK Toolbox.
 
 ---
 
